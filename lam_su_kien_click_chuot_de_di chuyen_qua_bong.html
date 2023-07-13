@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập</title>
+</head>
+<body>
+    <form>
+        <img id="ball" src="http://htlit.maytinhhtl.com/images/ban-do/ban-do-the-goi/hinh-anh-ban-do-the-gioi-kho-lon-full-hd-13.jpg" style="width: 300px" alt="Quả bóng vàng">
+        <p>Click button below to move the image to right</p>
+        <input type="button" onclick="moveLeft()" value="Move Left">
+        <input type="button" onclick="moveRight()" value="Move Right">
+    </form>
+    <script>
+        let imgball = null;
+        imgball = document.getElementById("ball");
+        function createInitialPosition() {
+            imgball.style.position = 'relative';
+            imgball.style.left = "0px";
+        }
+        function moveRight() {
+            imgball.style.left = parseInt(imgball.style.left) + 20 + "px";
+        }
+        function moveLeft() {
+          imgball.style.left = parseInt(imgball.style.left) - 20 + "px";
+        }
+        window.onload = createInitialPosition;
+    </script>
+</body>
+</html>
